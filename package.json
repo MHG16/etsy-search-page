@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MHG16/etsy-search-page/issues"
   },
-  "homepage": "https://github.com/MHG16/etsy-search-page#readme"
+  "homepage": "https://github.com/MHG16/etsy-search-page#readme",
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
 }
