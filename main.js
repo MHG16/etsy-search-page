@@ -20,11 +20,18 @@ var handleData = function(data) {
 	var container = $('#items');
 	//need to access the results array of the returned object
 	data.results.forEach(function(val, i, arr) {
-		var newEl = $('<div></div>', {'data-id': val.id}).html(val.name);
+		//assign newElement to a div containing 
+		var newEl = $('<div></div>', {'data-id': val.id}).html(val.title);
 		console.log(newEl);
 		container.append(newEl);
-	}
-)};
+	})
+
+$('div').on('click', function(e) {
+	console.log($(e.target).data());
+	})
+
+};
+
 
 
 var settings = {
