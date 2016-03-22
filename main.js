@@ -14,9 +14,11 @@
 //https://api.etsy.com/v2/listings/active?api_key={your api key }&keywords={search term}&includes=Images,Shop`
 
 var handlData = function(data) {
-	var container = 
-}
-
+	var container = $('.items');
+	data.forEach(function(val, i, arr) {
+		console.log(val);
+	})
+};
 
 
 
@@ -24,6 +26,7 @@ var settings = {
 
 url: 'https://api.etsy.com/v2/listings/active?api_key=osx7d470bi8dk1qqir1juhls&keywords=starwars&includes=Images,Shop`',
 type: 'GET',
+dataType: 'jsonp',
 success: handleData,
 error: function(err) {
 	console.log(err);
