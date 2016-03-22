@@ -17,13 +17,14 @@
 
 
 var handleData = function(data) {
-	//data={count:585876, results:[]}
 	var container = $('#items');
+	//need to access the results array of the returned object
 	data.results.forEach(function(val, i, arr) {
-		console.log(val);
-	})
-};
-
+		var newEl = $('<div></div>', {'data-id': val.id}).html(val.name);
+		console.log(newEl);
+		container.append(newEl);
+	}
+)};
 
 
 var settings = {
