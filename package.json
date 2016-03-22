@@ -1,0 +1,23 @@
+{
+  "name": "etsy-search-page",
+  "version": "1.0.0",
+  "description": "Etsy Search Page",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MHG16/etsy-search-page.git"
+  },
+  "keywords": [
+    "jquery",
+    "ajax"
+  ],
+  "author": "Martin Grossmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MHG16/etsy-search-page/issues"
+  },
+  "homepage": "https://github.com/MHG16/etsy-search-page#readme"
+}
