@@ -17,10 +17,12 @@
 
 
 var handleData = function(data) {
-	var container = $('.items');
-	//data.forEach(function(val, i, arr) {
-		console.log('hello');
-	};
+	//data={count:585876, results:[]}
+	var container = $('#items');
+	data.results.forEach(function(val, i, arr) {
+		console.log(val);
+	})
+};
 
 
 
