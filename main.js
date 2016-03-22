@@ -22,8 +22,10 @@ var handleData = function(data) {
 	data.results.forEach(function(val, i, arr) {
 		//assign newElement to a div containing 
 		var newEl = $('<div></div>', {'data-id': val.id}).html(val.title);
-		console.log(newEl);
+		var newPrice = $('<div></div>', {'data-id': val.id}).html(val.price);
+		//console.log(newEl);
 		container.append(newEl);
+		container.append(newPrice);
 	})
 
 $('div').on('click', function(e) {
