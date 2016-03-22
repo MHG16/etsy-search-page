@@ -21,12 +21,20 @@ var handleData = function(data) {
 	//need to access the results array of the returned object
 	data.results.forEach(function(val, i, arr) {
 		//assign newElement to a div containing 
-		var newEl = $('<div></div>', {'data-id': val.id}).html(val.title);
-		var newPrice = $('<div></div>', {'data-id': val.id}).html(val.price);
-		//console.log(newEl);
-		container.append(newEl);
-		container.append(newPrice);
-	})
+		var titleEl = $('<h3></h3>', {'data-id': val.id}).html(val.title);
+		var priceEl = $('<p></p>', {'data-id': val.id}).html(val.price);
+		var urlEl = $('<a></a>', {href: val.url}).html(val.url);
+		var imageEl =  $('<img>', {'data-id': val.id}).html(val.images);
+		var shopEl = $('<p></p>', {'data-id': val.id}).html(val.Shop.shop_name);
+		//var newDiv = $('<div class = "holding-div"></div>'); 
+
+		container.append(titleEl);
+		container.append(priceEl);
+		container.append(urlEl);
+		container.append(imageEl);
+		container.append(shopEl);
+
+	})	
 
 $('div').on('click', function(e) {
 	console.log($(e.target).data());
