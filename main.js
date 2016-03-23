@@ -37,12 +37,13 @@ var handleData = function(data) {
 		//for images to have links, append the imageEl to the linkEl 
 		linkEl.append(imageEl);
 
-
+		//append each item we need to add to the DIV:
 		boxDIV.append(linkEl);
 		boxDIV.append(titleEl);
 		boxDIV.append(shopEl);
 		boxDIV.append(priceEl);
 
+		//append the DIV to the container
 		container.append(boxDIV);
 		 
 	})
