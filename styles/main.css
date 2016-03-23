@@ -2,12 +2,17 @@ body {
 	background-color: #F5F5F1;
 }
 
-
+section {
+	margin-left: 23.375em;
+}
 
 
 div {
-	width: 14em;
+	width: 14em; 
 	background-color: white;
+	float: left;
+	margin-left: 1em;
+	margin-top: 1em;
 
 	}
 

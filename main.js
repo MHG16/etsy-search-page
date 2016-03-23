@@ -27,18 +27,22 @@ var handleData = function(data) {
 		//first create a DIV for each item that will contain the image, price, etc.  
 		var boxDIV = $('<div></div>');
 
+
 		var imageEl =  $('<img />', {src: val.Images[0].url_170x135});
 		var titleEl = $('<p class="title"></p>', {'data-id': val.id}).html(val.title);
 		var priceEl = $('<p class="price"></p>', {'data-id': val.id}).html('$'+ val.price+' USD');
-		var linkEl = $('<a></a>', {href: val.url}).html(val.url);
+		var linkEl = $('<a></a>', {href: val.url})
 		var shopEl = $('<p class="shop"></p>', {'data-id': val.id}).html(val.Shop.shop_name);
 		
+
+		//for images to have links, append the linkEl to the imageEl 
+		imageEl.append(linkEl);
+
 
 		boxDIV.append(imageEl);
 		boxDIV.append(titleEl);
 		boxDIV.append(shopEl);
 		boxDIV.append(priceEl);
-		boxDIV.append(linkEl);
 
 		container.append(boxDIV);
 		 
