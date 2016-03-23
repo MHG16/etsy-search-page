@@ -9,6 +9,7 @@ section {
 
 div {
 	width: 14em; 
+	height: 14.375em;
 	background-color: white;
 	float: left;
 	margin-left: 1em;
@@ -29,11 +30,14 @@ div {
 	.shop {
 		font-size: 0.75em;
 		color: #A0A0A0;
+		width: 50%;
+		margin-right: 0em;
 	}
 
 	.price {
 		color: #79C33D;
 		font-size: 0.75em;
+		float: left;
 	}
 
 }
