@@ -14,8 +14,7 @@
 //https://api.etsy.com/v2/listings/active.js?api_key={your api key }&keywords={search term}&includes=Images,Shop`
 
 
-//Want to use a loop to create the DIVs to hold items and fill
-//the DIVs with image, price, etc.  
+
 
 var handleData = function(data) {
 
@@ -27,7 +26,7 @@ var handleData = function(data) {
 		//first create a DIV for each item that will contain the image, price, etc.  
 		var boxDIV = $('<div></div>');
 
-
+		//each of the elements that we want to add to the DIV:
 		var imageEl =  $('<img />', {src: val.Images[0].url_170x135});
 		var titleEl = $('<p class="title"></p>', {'data-id': val.id}).html(val.title);
 		var priceEl = $('<p class="price"></p>', {'data-id': val.id}).html('$'+ val.price+' USD');
@@ -35,11 +34,11 @@ var handleData = function(data) {
 		var shopEl = $('<p class="shop"></p>', {'data-id': val.id}).html(val.Shop.shop_name);
 		
 
-		//for images to have links, append the linkEl to the imageEl 
-		imageEl.append(linkEl);
+		//for images to have links, append the imageEl to the linkEl 
+		linkEl.append(imageEl);
 
 
-		boxDIV.append(imageEl);
+		boxDIV.append(linkEl);
 		boxDIV.append(titleEl);
 		boxDIV.append(shopEl);
 		boxDIV.append(priceEl);

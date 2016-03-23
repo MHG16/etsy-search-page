@@ -2,6 +2,13 @@ body {
 	background-color: #F5F5F1;
 }
 
+header {
+	height: 7.875em;
+	background-color: white;
+}
+
+
+
 section {
 	margin-left: 23.375em;
 }
@@ -25,7 +32,6 @@ div {
 	.title{
 		font-size: 0.75em;
 		margin: 0em;
-		width: 14em;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -34,7 +40,7 @@ div {
 	.shop {
 		font-size: 0.75em;
 		color: #A0A0A0;
-		margin: 0.25em 0em 0em 0em;
+		margin: 0.30em 0em 0em 0em;
 		float: left;
 
 	}
@@ -42,7 +48,7 @@ div {
 	.price {
 		color: #79C33D;
 		font-size: 0.75em;
-		margin: 0.25em 0em 0em 0em;
+		margin: 0.30em 0.25em 0em 0em;
 		float: right;
 	}
 
