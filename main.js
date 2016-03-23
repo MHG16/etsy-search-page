@@ -18,10 +18,6 @@
 //the DIVs with image, price, etc.  
 
 var handleData = function(data) {
-//Want to create a grid of DIVs here:  
-// for (results in data) {
-//     $('<div />').appendTo('body');
-// }
 
 
 	var container = $('#items');
@@ -32,21 +28,20 @@ var handleData = function(data) {
 		var boxDIV = $('<div></div>');
 
 		var imageEl =  $('<img />', {src: val.Images[0].url_170x135});
-		var titleEl = $('<h3></h3>', {'data-id': val.id}).html(val.title);
-		var priceEl = $('<p></p>', {'data-id': val.id}).html(val.price);
-		var urlEl = $('<a></a>', {href: val.url}).html(val.url);
-		var shopEl = $('<p></p>', {'data-id': val.id}).html(val.Shop.shop_name);
-		var imageEl =  $('<img />', {src: val.Images[0].url_170x135});
+		var titleEl = $('<p class="title"></p>', {'data-id': val.id}).html(val.title);
+		var priceEl = $('<p class="price"></p>', {'data-id': val.id}).html('$'+ val.price+' USD');
+		var linkEl = $('<a></a>', {href: val.url}).html(val.url);
+		var shopEl = $('<p class="shop"></p>', {'data-id': val.id}).html(val.Shop.shop_name);
 		
 
 		boxDIV.append(imageEl);
 		boxDIV.append(titleEl);
-		boxDIV.append(priceEl);
-		boxDIV.append(urlEl);
 		boxDIV.append(shopEl);
+		boxDIV.append(priceEl);
+		boxDIV.append(linkEl);
 
 		container.append(boxDIV);
-		//then append each boxDIV to the container.  
+		 
 	})
 
 };	

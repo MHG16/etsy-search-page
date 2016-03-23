@@ -1,6 +1,40 @@
-
-
-img {
-	height:4em;
-	width: 4em;
+body {
+	background-color: #F5F5F1;
 }
+
+
+
+
+div {
+	width: 14em;
+	background-color: white;
+
+	}
+
+	img {
+		height: 11.5em;
+		width: 14em;
+	}
+
+	.title{
+		font-size: 0.75em;
+
+	}
+
+	.shop {
+		font-size: 0.75em;
+		color: #A0A0A0;
+	}
+
+	.price {
+		color: #79C33D;
+		font-size: 0.75em;
+	}
+
+}
+
+
+
+
+
+
