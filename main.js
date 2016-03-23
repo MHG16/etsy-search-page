@@ -20,37 +20,42 @@
 var handleData = function(data) {
 //Want to create a grid of DIVs here:  
 // for (results in data) {
-//     $('<div />', {
-//         'class' : 'sameDiv',
-//         'id'    : 'div' + i
-//     }).appendTo('body');
+//     $('<div />').appendTo('body');
 // }
 
 
 	var container = $('#items');
 	//need to access the results array of the returned object
 	data.results.forEach(function(val, i, arr) {
-		//assign newElement to a div containing 
+
 		var titleEl = $('<h3></h3>', {'data-id': val.id}).html(val.title);
 		var priceEl = $('<p></p>', {'data-id': val.id}).html(val.price);
 		var urlEl = $('<a></a>', {href: val.url}).html(val.url);
-		var imageEl =  $('<img />', {src: val.url}).html(val.url_170x135);
 		var shopEl = $('<p></p>', {'data-id': val.id}).html(val.Shop.shop_name);
-		//var newDiv = $('<div class = "holding-div"></div>'); 
+		
 
-		container.append(imageEl);
+		
 		container.append(titleEl);
 		container.append(priceEl);
 		container.append(urlEl);
 		container.append(shopEl);
 
-	})	
-
-$('div').on('click', function(e) {
-	console.log($(e.target).data());
+		//Images are within an array 
+		//data.results.Images.forEach(function(val,i, arr) {
+		//var imageEl =  $('<img />', {src: val.url}).html(val.Images.url_170x135);
+	
+		//container.append(imageEl);
 	})
 
-};
+	};	
+
+
+
+// $('div').on('click', function(e) {
+// 	console.log($(e.target).data());
+// 	})
+
+// };
 
 
 
