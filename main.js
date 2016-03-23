@@ -9,7 +9,7 @@
 // You may omit the "Top Categories" section
 // No  need to make any of the form elements work.
 
-//Surge: entertaining-industry.surge.sh
+
 //Etsy keystring: osx7d470bi8dk1qqir1juhls
 //https://api.etsy.com/v2/listings/active.js?api_key={your api key }&keywords={search term}&includes=Images,Shop`
 
@@ -28,34 +28,31 @@ var handleData = function(data) {
 	//need to access the results array of the returned object
 	data.results.forEach(function(val, i, arr) {
 
+		//first create a DIV for each item that will contain the image, price, etc.  
+		var boxDIV = $('<div></div>');
+
+		var imageEl =  $('<img />', {src: val.Images[0].url_170x135});
 		var titleEl = $('<h3></h3>', {'data-id': val.id}).html(val.title);
 		var priceEl = $('<p></p>', {'data-id': val.id}).html(val.price);
 		var urlEl = $('<a></a>', {href: val.url}).html(val.url);
 		var shopEl = $('<p></p>', {'data-id': val.id}).html(val.Shop.shop_name);
+		var imageEl =  $('<img />', {src: val.Images[0].url_170x135});
 		
 
-		
-		container.append(titleEl);
-		container.append(priceEl);
-		container.append(urlEl);
-		container.append(shopEl);
+		boxDIV.append(imageEl);
+		boxDIV.append(titleEl);
+		boxDIV.append(priceEl);
+		boxDIV.append(urlEl);
+		boxDIV.append(shopEl);
 
-		//Images are within an array 
-		//data.results.Images.forEach(function(val,i, arr) {
-		//var imageEl =  $('<img />', {src: val.url}).html(val.Images.url_170x135);
-	
-		//container.append(imageEl);
+		container.append(boxDIV);
+		//then append each boxDIV to the container.  
 	})
 
-	};	
+};	
 
 
 
-// $('div').on('click', function(e) {
-// 	console.log($(e.target).data());
-// 	})
-
-// };
 
 
 
