@@ -14,7 +14,8 @@
 //https://api.etsy.com/v2/listings/active.js?api_key={your api key }&keywords={search term}&includes=Images,Shop`
 
 
-
+//Want to use a loop to create the DIVs to hold items and fill
+//the DIVs with image, price, etc.  
 
 var handleData = function(data) {
 	var container = $('#items');
@@ -24,7 +25,7 @@ var handleData = function(data) {
 		var titleEl = $('<h3></h3>', {'data-id': val.id}).html(val.title);
 		var priceEl = $('<p></p>', {'data-id': val.id}).html(val.price);
 		var urlEl = $('<a></a>', {href: val.url}).html(val.url);
-		var imageEl =  $('<img>', {'data-id': val.id}).html(val.images);
+		var imageEl =  $('<img>', {src: val.url}).html(val.url_170x135);
 		var shopEl = $('<p></p>', {'data-id': val.id}).html(val.Shop.shop_name);
 		//var newDiv = $('<div class = "holding-div"></div>'); 
 
