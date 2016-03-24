@@ -29,7 +29,7 @@ var handleData = function(data) {
 		//each of the elements that we want to add to the DIV:
 		var imageEl =  $('<img />', {src: val.Images[0].url_170x135});
 		var titleEl = $('<p class="title"></p>', {'data-id': val.id}).html(val.title);
-		var priceEl = $('<p class="price"></p>', {'data-id': val.id}).html('$'+ val.price+' USD');
+		var priceEl = $('<p class="price"></p>', {'data-id': val.id}).html('$'+ val.price);
 		var linkEl = $('<a></a>', {href: val.url});
 		var shopEl = $('<p class="shop"></p>', {'data-id': val.id}).html(val.Shop.shop_name);
 		
